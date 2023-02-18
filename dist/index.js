@@ -8,6 +8,8 @@ const portfolioRouter_1 = require("./routes/portfolioRouter");
 const settings_1 = require("./settings");
 const PORT = process.env.PORT || settings_1.settings.PORT;
 const app = (0, express_1.default)();
+const jsonBodyMiddleware = express_1.default.json();
+app.use(jsonBodyMiddleware);
 app.listen(PORT, () => {
     console.log('Server listen on port', PORT);
 });

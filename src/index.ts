@@ -5,6 +5,8 @@ import { settings } from './settings'
 const PORT = process.env.PORT || settings.PORT
 
 const app = express()
+const jsonBodyMiddleware = express.json()
+app.use(jsonBodyMiddleware)
 
 app.listen(PORT, () => {
     console.log('Server listen on port', PORT);
