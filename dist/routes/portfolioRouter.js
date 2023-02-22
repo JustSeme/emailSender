@@ -4,6 +4,7 @@ exports.portfolioRouter = void 0;
 const express_1 = require("express");
 exports.portfolioRouter = (0, express_1.Router)();
 exports.portfolioRouter.get('/', (req, res) => {
+    console.log(req);
     res.send({
         message: 'Hello World'
     });
