@@ -6,10 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const portfolioRouter_1 = require("./routes/portfolioRouter");
 const settings_1 = require("./settings");
+const cors_1 = __importDefault(require("cors"));
 const PORT = process.env.PORT || settings_1.settings.PORT;
 const app = (0, express_1.default)();
 const jsonBodyMiddleware = express_1.default.json();
 app.use(jsonBodyMiddleware);
+app.use((0, cors_1.default)());
 app.listen(PORT, () => {
     console.log('Server listen on port', PORT);
 });
