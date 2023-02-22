@@ -10,6 +10,8 @@ portfolioRouter.get('/', (req: Request, res: Response) => {
     })
 })
 
-portfolioRouter.post('sendEmail', () => {
-
+portfolioRouter.post('/', (req: Request, res: Response) => {
+    console.log(req);
+    
+    res.send(200)
 })

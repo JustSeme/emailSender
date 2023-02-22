@@ -9,6 +9,8 @@ exports.portfolioRouter.get('/', (req, res) => {
         message: 'Hello World'
     });
 });
-exports.portfolioRouter.post('sendEmail', () => {
+exports.portfolioRouter.post('/', (req, res) => {
+    console.log(req);
+    res.send(200);
 });
 //# sourceMappingURL=portfolioRouter.js.map
